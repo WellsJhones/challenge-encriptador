@@ -24,6 +24,8 @@ function codify() {
       naoTemMatch = true;
       alert("Digite apenas letras e numeros");
       output.value = "texto invalido";
+      entrada.value = "";
+      entrada.focus();
     } else if (naoTemMatch == false) {
       if (text[i] == "e") {
         word += var_e;
@@ -38,7 +40,6 @@ function codify() {
       } else word += text[i];
     }
   }
-  //   console.log(word);
   //devolve o valor para o output e reseta o campo input
   if (naoTemMatch == false) {
     output.value = word;
