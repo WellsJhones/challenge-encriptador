@@ -1,5 +1,7 @@
 let output = document.querySelector(".text__output");
+let entrada = document.querySelector(".text__input");
 function codify() {
+  output.value = "";
   let text = document.querySelector(".text__input").value;
   let var_e = "enter";
   let var_i = "imes";
@@ -21,7 +23,9 @@ function codify() {
     } else word += text[i];
   }
   //   console.log(word);
-  output.innerHTML = word;
+
+  output.value = word;
+  entrada.value = "";
 }
 function decodify() {
   let text = document.querySelector(".text__input").value;
@@ -33,9 +37,10 @@ function decodify() {
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
   console.log(word);
-  document.querySelector(".text__output").innerHTML = word;
+  document.querySelector(".text__output").value = word;
+  entrada.value = "";
 }
 function copy() {
-  let text = document.querySelector(".text__output").innerHTML;
+  let text = document.querySelector(".text__output").value;
   navigator.clipboard.writeText(text);
 }
