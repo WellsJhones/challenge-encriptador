@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="nav__h1">Challenge Decodificador</h1>
+      </nav>
+    </header>
+    <main class="main_principal">
+      <section class="main_section">
+        <div class="input__and__buttons">
+          <textarea
+            class="text__input"
+            placeholder="Only lower case letters"
+          ></textarea>
+          <div class="div_buttons">
+            <button
+              onclick="codify()"
+              class="button__encode__decode"
+              class="encode"
+            >
+              Encode
+            </button>
+            <button onclick="decodify()" class="button__encode__decode">
+              Decode
+            </button>
+          </div>
+        </div>
+        <div class="h3_field">
+          <textarea class="text__output"></textarea>
+          <button onclick="copy()" class="button__h3">Copy text</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer__d">
+      <!-- <img src="assets/footer__img.jpeg" alt="logo youtube">
+      <p>Made By WellsJhones <img src="" alt=""></p> -->
+      <a class="footer__text" href="#"
+        ><img src="assets/footer__img.jpeg" alt="logo youtube" /> Made By
+        WellsJhones <img src="" alt=""
+      /></a>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
