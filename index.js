@@ -20,13 +20,14 @@ function codify() {
   let naoTemMatch = false;
   for (let i = 0; i < text.length; i++) {
     //verifica se o texto possui caracteres especiais
-    const pattern = "[a-zA-Z0-9 ]";
+    const pattern = '[a-zA-Z0-9"! ]';
     if (!text[i].match(pattern)) {
       naoTemMatch = true;
       alert("Digite apenas letras e numeros");
       output.value = "texto invalido";
       entrada.value = "";
       entrada.focus();
+      break;
     } else if (naoTemMatch == false) {
       if (text[i] == "e") {
         word += var_e;
