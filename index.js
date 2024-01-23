@@ -4,6 +4,11 @@ let entrada = document.querySelector(".text__input");
 function codify() {
   output.value = "";
   let text = document.querySelector(".text__input").value;
+  //alerta caso o campo esteja vazio
+  if (text == "") {
+    alert("Digite um texto para codificar");
+    return;
+  }
   let var_e = "enter";
   let var_i = "imes";
   let var_a = "ai";
@@ -31,6 +36,11 @@ function codify() {
 //funcao para decodificar o texto do input
 function decodify() {
   let text = document.querySelector(".text__input").value;
+  //alerta caso o campo esteja vazio
+  if (text == "") {
+    alert("Digite um texto para decodificar");
+    return;
+  }
   let word = "";
   word = text
     .replace(/enter/g, "e")
