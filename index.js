@@ -8,6 +8,7 @@ function codify() {
   //alerta caso o campo esteja vazio
   if (text == "") {
     alert("Digite um texto para codificar");
+    entrada.focus();
     return;
   }
   let var_e = "enter";
@@ -50,11 +51,13 @@ function codify() {
 function decodify() {
   let text = document.querySelector(".text__input").value;
   //alerta caso o campo esteja vazio
+  entrada.focus();
   if (text == "") {
     alert("Digite um texto para decodificar");
     return;
   }
   let word = "";
+
   word = text
     .replace(/enter/g, "e")
     .replace(/imes/g, "i")
