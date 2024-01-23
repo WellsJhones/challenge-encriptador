@@ -16,12 +16,15 @@ function codify() {
   let var_o = "ober";
   let var_u = "ufat";
   let word = "";
+  let naoTemMatch = false;
   for (let i = 0; i < text.length; i++) {
+    //verifica se o texto possui caracteres especiais
     const pattern = "[a-zA-Z0-9 ]";
     if (!text[i].match(pattern)) {
-      console.log("invalid");
+      naoTemMatch = true;
       alert("Digite apenas letras e numeros");
-    } else {
+      output.value = "texto invalido";
+    } else if (naoTemMatch == false) {
       if (text[i] == "e") {
         word += var_e;
       } else if (text[i] == "i") {
@@ -37,8 +40,10 @@ function codify() {
   }
   //   console.log(word);
   //devolve o valor para o output e reseta o campo input
-  output.value = word;
-  entrada.value = "";
+  if (naoTemMatch == false) {
+    output.value = word;
+    entrada.value = "";
+  }
 }
 //funcao para decodificar o texto do input
 function decodify() {
