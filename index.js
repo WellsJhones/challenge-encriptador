@@ -3,7 +3,8 @@ let entrada = document.querySelector(".text__input");
 //funcao para capturar o valor do input
 function codify() {
   output.value = "";
-  let text = document.querySelector(".text__input").value;
+  //captura o valor do input e transforma em minusculo
+  let text = document.querySelector(".text__input").value.toLocaleLowerCase();
   //alerta caso o campo esteja vazio
   if (text == "") {
     alert("Digite um texto para codificar");
@@ -16,17 +17,23 @@ function codify() {
   let var_u = "ufat";
   let word = "";
   for (let i = 0; i < text.length; i++) {
-    if (text[i] == "e") {
-      word += var_e;
-    } else if (text[i] == "i") {
-      word += var_i;
-    } else if (text[i] == "a") {
-      word += var_a;
-    } else if (text[i] == "o") {
-      word += var_o;
-    } else if (text[i] == "u") {
-      word += var_u;
-    } else word += text[i];
+    const pattern = "[a-zA-Z0-9 ]";
+    if (!text[i].match(pattern)) {
+      console.log("invalid");
+      alert("Digite apenas letras e numeros");
+    } else {
+      if (text[i] == "e") {
+        word += var_e;
+      } else if (text[i] == "i") {
+        word += var_i;
+      } else if (text[i] == "a") {
+        word += var_a;
+      } else if (text[i] == "o") {
+        word += var_o;
+      } else if (text[i] == "u") {
+        word += var_u;
+      } else word += text[i];
+    }
   }
   //   console.log(word);
   //devolve o valor para o output e reseta o campo input
