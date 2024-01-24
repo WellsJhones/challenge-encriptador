@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 :root{
-    --color-cian: rgb(148, 0, 255);
-    --color-purple: rgb(174, 210, 255);
+    --color-deep-blue: #0A3871;
+    --color-light-blue: rgb(174, 210, 255);
     --primary-font: 'Krona One', sans-serif;
     --secondary-font: 'Inter', sans-serif;
 }
@@ -50,8 +50,8 @@ body{
 .button__encode{
     font-family: var(--secondary-font);
     color: white;
-    background-color: #0A3871;
-    border: 0.1rem solid #0A3871;
+    background-color: var(--color-deep-blue);
+    border: 0.1rem solid var(--color-deep-blue);
     border-radius: 2rem;
     width: 13rem;
     height: 3rem;
@@ -60,15 +60,15 @@ body{
     text-decoration: none;
 }
 .button__encode:hover{
-    background-color: var(--color-purple);
+    background-color: var(--color-light-blue);
     color: rgb(36, 33, 33);
     transition: 0.5s;
 }
 .button__decode{
     font-family: var(--secondary-font);
-    color: #0A3871;
+    color: var(--color-deep-blue);
     background-color: #F3F5FC;
-    border: 0.1rem solid #0A3871;
+    border: 0.1rem solid var(--color-deep-blue);
     border-radius: 2rem;
     width: 13rem;
     height: 3rem;
@@ -77,17 +77,17 @@ body{
     text-decoration: none;
 }
 .button__decode:hover{
-    background-color: var(--color-purple);
+    background-color: var(--color-light-blue);
     color: rgb(36, 33, 33);
     transition: 0.5s;
 }
 .button__encode__decode:hover{
-    background-color: var(--color-purple);
+    background-color: var(--color-light-blue);
     color: rgb(36, 33, 33);
     transition: 0.5s;
 }
 .h3_field{
-    font-family: var(--primary-font);
+    font-family: var(--secondary-font);
     border: none;
     border-radius: 4rem;
     color: black;
@@ -104,13 +104,13 @@ body{
     
     height: 3rem;
     width: 13rem;
-    border: 0.1rem solid #0A3871;
+    border: 0.1rem solid var(--color-deep-blue);
     border-radius: 2rem;
-    color: #0A3871;
+    color:var(--color-deep-blue);
     background-color: white;
 }
 #button__h3:hover{
-    background-color: var(--color-purple);
+    background-color: var(--color-light-blue);
     color: rgb(36, 33, 33);
     transition: 0.5s;
 }
@@ -130,7 +130,7 @@ body{
     border-radius: 2rem;
     width: 30rem;
     text-align: center;
-    color: #0A3871
+    color: var(--color-deep-blue);
 
     
 }
@@ -174,7 +174,7 @@ body{
     background-color: #F3F5FC; 
 }
 .footer__text:hover{
-    background-color: var(--color-purple);
+    background-color: var(--color-light-blue) ;
     color: rgb(36, 33, 33);
     transition: 0.5s;
 
@@ -189,13 +189,13 @@ body{
     height: 5rem;
     width: rem;
     padding: rem;
-    font-family: Inter;
+    font-family: var(--secondary-font);
     font-weight: 400;
 }
 #h3__text{
     height: 6rem;
     width: rem;
     padding: 2rem;
-    font-family: Inter;
+    font-family: var(--secondary-font);
     font-weight: 400;
 }
