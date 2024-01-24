@@ -9,7 +9,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <h1 class="nav__h1">Challenge Decodificador</h1>
+        <img src="assets/github.png" alt="" />
       </nav>
     </header>
     <main class="main_principal">
@@ -20,24 +20,14 @@
             placeholder="digite o texto aqui"
           ></textarea>
           <div class="div_buttons">
-            <button
-              onclick="codify()"
-              class="button__encode__decode"
-              class="encode"
-            >
-              Encode
-            </button>
-            <button onclick="decodify()" class="button__encode__decode">
-              Decode
-            </button>
+            <button onclick="codify()" class="button__encode">Encode</button>
+            <button onclick="decodify()" class="button__decode">Decode</button>
           </div>
         </div>
         <div class="h3_field">
-          <textarea
-            class="text__output"
-            placeholder="este campo é somente para leitura"
-          ></textarea>
-          <button onclick="copy()" class="button__h3">Copy text</button>
+          <textarea id="text__output" ="text" class="show"></textarea>
+
+          <button onclick="copy()" id="button__h3">Copy text</button>
         </div>
       </section>
     </main>

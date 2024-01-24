@@ -1,5 +1,8 @@
-let output = document.querySelector(".text__output");
+let output = document.querySelector("#text__output");
 let entrada = document.querySelector(".text__input");
+let copy__buton = document.querySelector("#button__h3");
+let textarea = document.getElementById("text__output");
+
 //funcao para capturar o valor do input
 function codify() {
   output.value = "";
@@ -27,6 +30,7 @@ function codify() {
       output.value = "texto invalido";
       entrada.value = "";
       entrada.focus();
+
       break;
     } else if (naoTemMatch == false) {
       if (text[i] == "e") {
@@ -44,6 +48,8 @@ function codify() {
   }
   //devolve o valor para o output e reseta o campo input
   if (naoTemMatch == false) {
+    copy__buton.classList.remove("hidden");
+
     output.value = word;
     entrada.value = "";
   }
@@ -71,6 +77,6 @@ function decodify() {
 }
 //funcao para copiar o texto do output para a area de transferencia
 function copy() {
-  let text = document.querySelector(".text__output").value;
+  let text = document.querySelector("#text__output").value;
   navigator.clipboard.writeText(text);
 }
