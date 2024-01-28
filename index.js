@@ -79,4 +79,5 @@ function decodify() {
 function copy() {
   let text = document.querySelector("#text__output").value;
   navigator.clipboard.writeText(text);
+  alert("Texto copiado!");
 }
