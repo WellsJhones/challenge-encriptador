@@ -1,13 +1,28 @@
 let output = document.querySelector("#text__output");
 let entrada = document.querySelector(".text__input");
 let copy__buton = document.querySelector("#button__h3");
-let textarea = document.getElementById("text__output");
+let btb__codify = document.querySelector(".button__encode");
+let btb__decodify = document.querySelector(".button__decode");
 
 //funcao para capturar o valor do input
-function codify() {
+btb__codify.addEventListener("click", encript__data);
+btb__decodify.addEventListener("click", decodify__data);
+copy__buton.addEventListener("click", copy);
+
+function get__text() {
+  let text = entrada.value;
+  return text;
+}
+function encript__data() {
+  let text = get__text();
+  codify(text);
+}
+function decodify__data() {
+  let text = get__text();
+  decodify(text);
+}
+function codify(text) {
   output.value = "";
-  //captura o valor do input e transforma em minusculo
-  let text = document.querySelector(".text__input").value.toLocaleLowerCase();
   //alerta caso o campo esteja vazio
   if (text == "") {
     alert("Digite um texto para codificar");
@@ -55,8 +70,7 @@ function codify() {
   }
 }
 //funcao para decodificar o texto do input
-function decodify() {
-  let text = document.querySelector(".text__input").value;
+function decodify(text) {
   //alerta caso o campo esteja vazio
   entrada.focus();
   if (text == "") {
@@ -77,7 +91,11 @@ function decodify() {
 }
 //funcao para copiar o texto do output para a area de transferencia
 function copy() {
-  let text = document.querySelector("#text__output").value;
+  if (output.value == "") {
+    alert("Nao ha texto para copiar");
+    return;
+  }
+  let text = output.value;
   navigator.clipboard.writeText(text);
   alert("Texto copiado!");
 }
