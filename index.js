@@ -11,7 +11,7 @@ copy__buton.addEventListener("click", copy);
 
 function get__text() {
   let text = entrada.value;
-  return text;
+  return text.toLowerCase();
 }
 function encript__data() {
   let text = get__text();
