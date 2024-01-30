@@ -38,7 +38,7 @@ function codify(text) {
   let naoTemMatch = false;
   for (let i = 0; i < text.length; i++) {
     //verifica se o texto possui caracteres especiais
-    const pattern = '[a-zA-Z0-9"!. ]';
+    const pattern = '[a-zA-Z0-9"!.\n ]';
     if (!text[i].match(pattern)) {
       naoTemMatch = true;
       alert("Digite apenas letras e numeros");
